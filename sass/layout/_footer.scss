@@ -1,0 +1,31 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+
+@use '../abstracts';
+@use "sass:color";
+
+footer {
+    text-align: center;
+    padding: 20px 20px;
+    margin: 0px;
+    width: 100%;
+    background-image: abstracts.$bg-header-gradient;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    & a {
+        text-decoration: none;
+        color: abstracts.$grey-text;
+        &:hover {
+            color: abstracts.$secondary_color;
+        }
+    }
+    & p {
+        margin: 0;
+        font-style: italic;
+        opacity: 70%;
+    }
+}

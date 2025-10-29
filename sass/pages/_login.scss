@@ -1,0 +1,21 @@
+@use '../abstracts';
+
+main.logIN {
+    padding-bottom: 20px;
+    & form {
+        padding-bottom: 20px;
+        & p label~input {
+            &:user-valid {
+                border-style: solid;
+                border-color: green;
+            }
+            &:user-invalid {
+                border-color: red;
+            }
+        }
+    }
+    @include abstracts.breakpoint(tablet) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}

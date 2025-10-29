@@ -1,0 +1,86 @@
+@use '../abstracts';
+
+main.sobre-nosotros {
+    picture {
+        display: block;
+        width: 80%;
+        margin: 0px auto;
+        line-height: 0;
+        text-align: center;
+        img {
+            width: 100%;
+            margin: 0px auto;
+        }
+    }
+    section.equipoDir, section.equipoDoc {
+        padding: 0px 5px;display: flex;
+        gap: 30px;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        @include abstracts.breakpoint(tablet) {
+            padding: 20px;
+        }
+        &>h3 {
+            width: 100%;
+        }
+        & summary {
+            margin-bottom: 20px;
+        }
+        & article {
+            flex-basis: 330px;
+            flex-grow: 1;
+            max-width: 450px;
+            perspective: 500px;
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            grid-template-rows: 30px 150px;
+            gap: 10px 20px;
+            align-items: start;
+            & figure {
+                display: inline-block;
+                position: relative;
+                transition: transform 1s;
+                transform-style: preserve-3d;
+                &:hover {
+                    transform: rotateY(180deg);
+                    transition: transform 1s;
+                    transform-style: preserve-3d;
+                }
+                & img {
+                    border-radius: 50%;
+                }
+                & figcaption {
+                    display: inline-block;
+                    width: 70%;
+                    text-align: center;
+                    color: abstracts.$secondary-color;
+                    position: absolute;
+                    bottom: 20%;
+                    left: 15%;
+                    transform: rotateY(180deg);
+                    backface-visibility: hidden;
+                    background-color: rgba(abstracts.$white, 0.75);
+                    box-shadow: 0px 0px 15px rgba(abstracts.$white, 0.75);
+                    border-radius: 10px;
+                    text-shadow: 2px 2px abstracts.$primary-color;
+                }
+            }
+            &>h4 {
+                order: -1;
+                grid-column: span 2;
+                text-align: center;
+                margin: 0;
+            }
+            &>h5 {
+                grid-column: 1 / span 1;
+                text-align: center;
+                margin: 0;
+            }
+            &>p {
+                margin: 0;
+                grid-row: 2 / span 2;
+                grid-column: 2 / span 1;
+            }
+        }
+    }
+}

@@ -1,0 +1,60 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+// Breakpoints
+$bp-tablet: 768px;
+$bp-tablet-horizontal: 1024px;
+$bp-desktop: 1200px;
+$bp-desktop-xl: 1440px;
+
+// Font families
+$primary-font:"Poppins";
+$secondary-font:"Poppins";
+
+// Font sizes
+$fs_heading_xl:88px;
+$fs_heading_l:48px;
+$fs_heading_m:36px;
+$fs_heading_s:24px;
+$fs_body_l:18px;
+$fs_body_m:16px;
+$fs_body_s:14px;
+$fs_title:40px;
+$fs_main_p:24px;
+$fs_par:18px;
+
+// LineHeights
+$lh_heading_xl:88px;
+$lh_heading_l:56px;
+$lh_heading_m:32px;
+$lh_heading_s:36px;
+$lh_body_l:28px;
+$lh_body_m:26px;
+$lh_body_s:24px;
+$lh_title:40px;
+
+// Font weights
+$fw_thin:100;
+$fw_extra_light:200;
+$fw_light:300;
+$fw_regular:400;
+$fw_medium:500;
+$fw_semi_bold: 600;
+$fw_bold:700;
+$fw_extra_bold:800;
+$fw_black:900;
+
+// Colors
+$primary_color:#def954;
+$secondary_color: #4ec2e9;
+$primary_color_a:rgba(#def954, 0.1);
+$secondary_color_a: rgba(#4ec2e9, 0.1);
+$grey-text:#2A2A2A;
+$grey-bg:#979797;
+$white:#FFFFFF;
+
+// Gradients
+$bg-header-gradient: linear-gradient(to right, $primary_color, $secondary_color);
+$bg-header-gradient-r: linear-gradient(to left, $primary_color, $secondary_color);
+$bg-main-gradient: linear-gradient(to right, $primary_color_a, $secondary_color_a);

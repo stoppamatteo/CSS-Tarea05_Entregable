@@ -1,0 +1,108 @@
+@use '../abstracts';
+
+main.blog-main {
+    padding-bottom: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+    @include abstracts.breakpoint(tablet) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    &>p {
+        padding-bottom: 20px;
+    }
+    & section {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        & article {
+            display: grid;
+            grid-template-columns: 1fr;
+            &>h3 {
+                order: -1;
+                text-align: center;
+                @include abstracts.breakpoint(tablet) {
+                    grid-column: span 2;
+                }
+                @include abstracts.breakpoint(desktop) {
+                    grid-column: span 1;
+                }
+            }
+            & img {
+                margin: 0 auto;
+                @include abstracts.breakpoint(tablet) {
+                    grid-row: span 2;
+                }
+                @include abstracts.breakpoint(desktop) {
+                    grid-row: span 1;
+                }
+            }
+            & em {
+                & .btn{
+                    display: inline-block;
+                    text-decoration: none;
+                }
+                @include abstracts.breakpoint(tablet) {
+                    text-align: right;
+                }
+                @include abstracts.breakpoint(desktop) {
+                    text-align: left;
+                }
+            }
+            @include abstracts.breakpoint(tablet) {
+                grid-template-columns: 300px 1fr;
+                gap: 10px 20px;
+            }
+            @include abstracts.breakpoint(desktop) {
+                flex-basis: 40%;
+                flex-grow: 1;
+                grid-template-columns: 1fr;
+                row-gap: 0;
+            }
+        }
+        
+    }
+}
+
+main.blog {
+    padding: 20px 5px;
+    display: flex;
+    flex-direction: column;
+    @include abstracts.breakpoint(tablet) {
+        padding: 20px;
+    }
+    &>p:first-child {
+        margin: 0px 0px 20px;
+        order: -2;
+        & .btn {
+            display: inline-block;
+        }
+    }
+    &>iframe {
+        margin: 0 auto;
+        max-width: 700px;
+    }
+    &>h1 {
+        order: -1;
+    }
+    & >article {
+        padding-bottom: 20px;
+        &>h2, &>p:last-child {
+            border-top: none;
+        }
+        &>p {
+            margin: 0;
+        }
+        & img {
+            width: 60%;
+            min-width: 350px;
+            max-width: 700px;
+        }
+    }
+    &>p:last-child {
+        margin: 0;
+        & .btn {
+            display: inline-block;
+        }
+    }
+}

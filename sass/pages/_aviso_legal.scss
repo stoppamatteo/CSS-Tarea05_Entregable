@@ -1,0 +1,8 @@
+@use '../abstracts';
+
+main>article {
+    &>h2, &>p:last-child {
+        padding-top: 10px;
+        border-top: 1px solid abstracts.$grey-text;
+    }
+}

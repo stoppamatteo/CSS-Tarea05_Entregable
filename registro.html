@@ -1,0 +1,91 @@
+<!doctype html>
+<html class="no-js" lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Registro</title>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="description" content="página de registro a la academia">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="icon" href="./img/favicon.png" type="image/png">
+
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+
+  <header>
+    <img src="./img/Conquer-Blocks-logo.avif" alt="Logo Conquer">
+    <nav>
+      <ul>
+        <li><a class="btn" href="./index.html">Home</a></li>
+        <li><a class="btn" href="./quines_somos.html">Quiénes somos</a></li>
+        <li><a class="btn" href="./cursos.html">Cursos</a></li>
+        <li><a class="btn" href="./blog.html">Blog</a></li>
+        <li><a class="btn btnActive" href="./registro.html">Registro</a></li>
+        <li><a class="btn" href="./login.html">Login</a></li>
+        <li><a class="btn" href="./contactos.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="registro">
+    <h1>Formulario de registro</h1>
+    <h2>Únete a nuestra comunidad</h2>
+    <form action="#" method="post" enctype="multipart/form-data">
+      <fieldset>
+        <legend>Datos personales</legend>
+        <p>
+          <label for="name">Nombre completo:</label> <br />
+          <input type="text" maxlength="50" name="nombre" id="name">
+        </p>
+        <p>
+          <label for="birthdate">Fecha de nacimiento:</label> <br />
+          <input type="date" name="fecha" id="birthdate">
+        </p>
+        <p>
+          <label for="mail">Email:</label> <br />
+          <input type="email" name="Email" id="mail">
+        </p>
+        <p>
+          <label for="address">Dirección:</label> <br />
+          <input type="text" name="direccion" id="address" maxlength="50">
+        </p>
+      </fieldset>
+      <fieldset>
+        <legend>Para conocernos mejor...</legend>
+        <p>
+          <label for="webpage">Página web:</label> <br />
+          <input type="url" name="pagina" id="webpage">
+        </p>
+        <p>
+          <label for="photo">Foto:</label> <br />
+          <input type="file" name="foto" id="photo">
+        </p>
+        <p>
+          <label for="biography">Biografía:</label> <br />
+          <textarea name="biografia" id="biography" cols="50" rows="10" placeholder="Queremos conocerte, cuéntanos algo sobre ti"></textarea>
+        </p>
+        <button class="btn">Envía</button>
+      </fieldset>
+    </form>
+  </main>
+
+  <footer>
+    <a href="./aviso_legal.html">Aviso Legal</a>
+    <p>&copy; All rights reserved - 2025</p>
+  </footer>
+  <script src="js/app.js"></script>
+
+</body>
+
+<script type="module" src="./src/main.js"></script>
+
+</html>

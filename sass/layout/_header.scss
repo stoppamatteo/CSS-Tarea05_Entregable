@@ -1,0 +1,32 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+@use '../abstracts';
+
+header {
+    text-align: center;
+    padding: 20px 0px;
+    margin: 0px;
+    width: 100%;
+    background-image: abstracts.$bg-header-gradient;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+    @include abstracts.breakpoint(tablet) {
+        padding: 20px;
+    }
+    &>img {
+        width: 240px; //abstracts.$logo-width-phone2tablet;
+        object-fit: contain;
+    }
+    & nav {
+        & ul {
+            @include abstracts.format-list();
+        }
+    }
+}

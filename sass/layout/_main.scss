@@ -1,0 +1,50 @@
+@use '../abstracts';
+
+main {
+    background-image: abstracts.$bg-main-gradient;
+    &>h1 {
+        margin: 0;
+        padding: 30px 0px;
+    }
+    section.hero {
+        margin: 0px;
+        padding: 0px 5px;
+        border-bottom: 1px solid abstracts.$secondary_color;
+        @include abstracts.breakpoint(tablet) {
+            padding: 0px 20px;
+        }
+        & picture {
+            display: block;
+            width: 80%;
+            line-height: 0px;
+            margin: 0px auto;
+        }
+        & img {
+            display: block;
+            width: 100%;
+            margin: 0px auto;
+        }
+    }
+    section.sobreNosotros, section.cursos, section.noticias {
+        padding: 20px 5px;
+        border-bottom: 1px solid abstracts.$secondary_color;
+        &>h2 {
+            text-align: center;
+        }
+        @include abstracts.breakpoint(tablet) {
+            padding: 20px;
+        }
+        &>a {
+            display: inline-block;
+        }
+        &:last-of-type {
+            border-bottom: none;
+        }
+    }
+    & h1, & h2, & h3 {
+        background-image: abstracts.$bg-header-gradient-r;
+        background-clip: text;
+        color: transparent;
+        text-shadow: 0px 0px rgba(abstracts.$grey-text, 0.15);
+    }
+}

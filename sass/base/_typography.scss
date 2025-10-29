@@ -1,0 +1,37 @@
+@use '../abstracts';
+
+/**
+ * Basic typography style for copy text
+ */
+body {
+  font-family: abstracts.$primary-font, Verdana, sans-serif;
+  font-size: abstracts.$fs_body_s;
+  line-height: abstracts.$lh_body_s;
+  font-weight: abstracts.$fw_medium;
+  color: abstracts.$grey-text;
+  @include abstracts.breakpoint(tablet) {
+        font-size: abstracts.$fs_body_m;
+        line-height: abstracts.$lh_body_m;
+    }
+  @include abstracts.breakpoint(desktopxl) {
+        font-size: abstracts.$fs_body_l;
+        line-height: abstracts.$lh_body_l;
+    }
+}
+
+.sec_font {
+  font-family: abstracts.$secondary-font, Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+  font-size: abstracts.$fs_heading_s;
+  line-height: abstracts.$lh_title;
+  font-weight: abstracts.$fw_bold;
+  text-align: center;
+  @include abstracts.breakpoint(tablet) {
+        font-size: abstracts.$fs_heading_m;
+    }
+  @include abstracts.breakpoint(desktopxl) {
+        font-size: abstracts.$fs_heading_l;
+    }
+}

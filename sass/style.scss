@@ -1,0 +1,39 @@
+// Tarea Entregable N. 5 - Sitio Web de la academia
+
+// Página adaptable de diseño libre.
+
+
+@charset "UTF-8";
+
+@use 'abstracts';
+
+// 1. Vendors
+@use 'vendors/normalize';
+
+// 2. Base stuff
+@use 'base/base';
+@use 'base/fonts';
+@use 'base/helpers';
+@use 'base/typography';
+
+// 3. Layout-related sections
+@use 'layout/footer';
+@use 'layout/header';
+@use 'layout/body';
+@use 'layout/main';
+
+// 4. Components
+@use 'components/button';
+
+// 5. Pages
+@use 'pages/home';
+@use 'pages/sobre_nosotros';
+@use 'pages/cursos';
+@use 'pages/blog';
+@use 'pages/registro';
+@use 'pages/login';
+@use 'pages/contactos';
+@use 'pages/aviso_legal';
+
+// 6. Themes
+@use 'themes/default';
